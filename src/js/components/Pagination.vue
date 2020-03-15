@@ -143,7 +143,7 @@ export default {
   flex-direction: row;
   flex-wrap: nowrap; // single line
   width: 100%;
-  margin-top: 50px;
+  margin: 50px 0 20px 0;
 
   .pagination__control-button {
     font-family: $distant-galaxy-font;

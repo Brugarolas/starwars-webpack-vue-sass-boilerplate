@@ -1,6 +1,6 @@
 <template>
   <div class="people-list">
-    <Title message="Star Wars characters:" />
+    <slot />
     <ul class="people-list__people">
       <Person v-for="person in people" :key="person.id" :person="person" extra-class="people-list__person" />
     </ul>
@@ -10,7 +10,6 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import Title from '@/js/components/Title';
 import Person from '@/js/components/Person';
 import Pagination from '@/js/components/Pagination';
 import { DEFAULT_ITEMS_PER_PAGE } from '@/js/constants';
@@ -18,7 +17,7 @@ import { DEFAULT_ITEMS_PER_PAGE } from '@/js/constants';
 export default {
   name: 'People',
   components: {
-    Title, Person, Pagination
+    Person, Pagination
   },
   data () {
     return {
