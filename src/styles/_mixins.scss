@@ -1,0 +1,6 @@
+@mixin unselectable {
+  -webkit-user-select: none; // Chrome 4-53, Safari all, Opera 15-40
+  -moz-user-select: none; // FIrefox 2-68
+  -ms-user-select: none; // IE, Edge 12-18
+  user-select: none;  
+}

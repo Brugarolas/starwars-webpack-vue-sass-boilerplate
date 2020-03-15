@@ -1,0 +1,22 @@
+@import 'colors';
+@import 'mixins';
+@import 'fonts';
+
+:root, html, body {
+  margin: 0;
+  background-color: $main-background-color;
+  font-family: $roboto-font;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: inherit;
+}

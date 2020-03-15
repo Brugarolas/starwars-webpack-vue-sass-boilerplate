@@ -1,0 +1,41 @@
+{
+  "root": true,
+  "plugins": [
+    "import",
+    "promise",
+    "vue"
+  ],
+  "extends": [
+    "semistandard",
+    "plugin:import/recommended",
+    "plugin:promise/recommended",
+    "plugin:vue/recommended"
+  ],
+  "rules": {
+    "vue/max-attributes-per-line": ["warn", {
+      "singleline": 5,
+      "multiline": {
+        "max": 1,
+        "allowFirstLine": false
+      }
+    }],
+    "promise/no-callback-in-promise": 0,
+    "promise/catch-or-return": ["warn", {
+      "allowFinally": true,
+      "terminationMethod": ["catch", "finally"]
+    }]
+  },
+  "settings": {
+    "import/resolver": "webpack"
+  },
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "PUBLIC_PATH": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  }
+}

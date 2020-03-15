@@ -1,0 +1,40 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+// Local Fonts
+@font-face {
+  font-family: 'DistantGalaxy';
+  src: url('../fonts/SfDistantGalaxy-0l3d.ttf') format('truetype');
+}
+
+// Variants
+$roboto-variants: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700
+);
+
+// Variables
+$roboto-font: 'Roboto', sans-serif;
+$distant-galaxy-font: 'DistantGalaxy', serif;
+
+// Fonts
+@mixin roboto($variant, $size: 'inherit') {
+  @if map-has-key($roboto-variants, $variant) {
+    $weight: map-get($roboto-variants, $variant);
+
+    font-family: $roboto-font;
+    font-weight: $weight;
+    font-style: normal;
+    font-size: $size;
+  } @else {
+    @warn 'Invalid Roboto variant: #{$variant}.';
+  }
+}
+
+@mixin distant-galaxy($size: 'inherit') {
+  font-family: $distant-galaxy-font;
+  font-style: normal;
+  font-size: $size;
+}
