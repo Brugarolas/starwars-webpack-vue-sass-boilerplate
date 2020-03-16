@@ -2,5 +2,12 @@
   -webkit-user-select: none; // Chrome 4-53, Safari all, Opera 15-40
   -moz-user-select: none; // FIrefox 2-68
   -ms-user-select: none; // IE, Edge 12-18
-  user-select: none;  
+  user-select: none;
+
+  /* Disable highlight */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
 }

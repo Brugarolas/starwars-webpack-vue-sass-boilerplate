@@ -38,7 +38,7 @@ module.exports = {
               sassOptions: {
                 includePaths: [path.resolve(__dirname, 'node_modules')]
               },
-              prependData: '@import "@/styles/app.scss";'
+              prependData: '@import "@/styles/globals.scss";'
             }
           }
         ]
